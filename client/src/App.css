@@ -1,0 +1,1408 @@
+/* ==========================================
+   NEXLEARN — PUBLIC WEBSITE
+   Silver Grey + Sage Green Theme
+   Responsive + Floating Animations
+========================================== */
+
+.site-shell {
+  min-height: 100vh;
+  overflow: clip;
+  background: var(--bg-main);
+  color: var(--text-primary);
+}
+
+.site-shell * {
+  box-sizing: border-box;
+}
+
+.site-shell .container {
+  width: min(1240px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+.site-shell a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-shell button {
+  font: inherit;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.site-shell .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 21px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-weight: 650;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.site-shell .btn:hover {
+  transform: translateY(-2px);
+}
+
+.site-shell .btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 22px #203c3020;
+}
+
+.site-shell .btn-primary:hover {
+  background: var(--color-primary-hover, #41675d);
+}
+
+.site-shell .btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.site-shell .btn-secondary:hover {
+  background: var(--bg-card);
+}
+
+/* ==========================================
+   MOBILE NAVBAR
+========================================== */
+
+@media (max-width: 1100px) {
+  .site-shell .nav-links {
+    gap: 20px;
+  }
+
+  .site-shell .navbar-inner {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-shell .brand-copy strong {
+    font-size: 20px;
+  }
+
+  .site-shell .brand-copy small {
+    font-size: 8px;
+  }
+
+  .site-shell .brand-mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .site-shell .nav-actions {
+    gap: 8px;
+  }
+
+  .site-shell .theme-toggle,
+  .site-shell .mobile-menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-shell .brand-mark,
+  .site-shell .nav-links > a,
+  .site-shell .nav-links > a::after,
+  .site-shell .theme-toggle,
+  .site-shell .mobile-menu-toggle {
+    transition: none !important;
+  }
+}
+
+/* ==========================================
+   SHARED SECTION ELEMENTS
+========================================== */
+
+.site-shell .section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.site-shell .section-label-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.site-shell h1,
+.site-shell h2,
+.site-shell h3,
+.site-shell p {
+  margin-top: 0;
+}
+
+.site-shell h1,
+.site-shell h2 {
+  letter-spacing: -0.055em;
+}
+
+.site-shell .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--color-primary);
+  transition: gap 0.2s;
+}
+
+.site-shell .text-link:hover {
+  gap: 15px;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.site-shell .hero-section {
+  position: relative;
+  padding: 88px 0 75px;
+  background: var(--bg-main);
+}
+
+.site-shell .hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.03fr) minmax(0, 0.97fr);
+  align-items: center;
+  gap: 55px;
+}
+
+.site-shell .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.site-shell .hero-content h1 {
+  font-size: clamp(52px, 5.3vw, 83px);
+  line-height: 1.075;
+  margin: 25px 0;
+  font-weight: 800;
+}
+
+.site-shell .hero-highlight {
+  color: var(--color-primary);
+}
+
+.site-shell .hero-description {
+  max-width: 520px;
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+.site-shell .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin: 30px 0;
+}
+
+.site-shell .hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.site-shell .hero-note-icon {
+  display: grid;
+  place-items: center;
+  color: var(--color-primary);
+}
+
+/* ==========================================
+   HERO ARTWORK
+========================================== */
+
+.site-shell .hero-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 520px;
+  isolation: isolate;
+}
+
+.site-shell .hero-visual-glow {
+  position: absolute;
+  inset: 12% 5%;
+  z-index: -2;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--color-accent) 0%,
+    transparent 70%
+  );
+  opacity: 0.85;
+}
+
+.site-shell .hero-orbit {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.site-shell .hero-orbit-one {
+  width: 95%;
+  aspect-ratio: 1;
+}
+
+.site-shell .hero-orbit-two {
+  width: 75%;
+  aspect-ratio: 1;
+  border-style: dashed;
+}
+
+/* ==========================================
+   HERO MAIN CARD
+   Floating + Rotating Animation
+========================================== */
+
+.site-shell .hero-main-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: min(375px, 78%);
+  height: 430px;
+  padding: 25px;
+
+  border-radius: 27px;
+
+  background: linear-gradient(
+    155deg,
+    var(--color-primary),
+    #294d44
+  );
+
+  color: #fff;
+
+  box-shadow: 0 30px 65px #10241c35;
+
+  /* Original rotation preserved */
+  transform: rotate(-5deg);
+
+  /* Floating animation runs independently */
+  translate: 0 0;
+  animation: nexHeroFloat 5s ease-in-out infinite;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* ==========================================
+   HOVER EFFECT
+========================================== */
+
+.site-shell .hero-main-card:hover {
+  transform: rotate(-1deg) translateY(-4px);
+
+  box-shadow: 0 35px 75px #10241c40;
+}
+
+/* ==========================================
+   FLOATING ANIMATION
+   Moves up and down without overriding rotation
+========================================== */
+
+@keyframes nexHeroFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -10px;
+  }
+}
+
+/* ==========================================
+   HERO CARD TOP & BOTTOM
+========================================== */
+
+.site-shell .hero-card-top,
+.site-shell .hero-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* ==========================================
+   CARD LABELS
+========================================== */
+
+.site-shell .hero-card-kicker,
+.site-shell .hero-card-caption {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  opacity: 0.8;
+}
+
+/* ==========================================
+   CARD ICON
+========================================== */
+
+.site-shell .hero-card-icon {
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #ffffff55;
+  border-radius: 10px;
+}
+
+/* ==========================================
+   HERO EMBLEM
+========================================== */
+
+.site-shell .hero-emblem {
+  display: grid;
+  place-items: center;
+  align-self: center;
+
+  width: 225px;
+  height: 225px;
+
+  border: 1px solid #ffffff40;
+  border-radius: 50%;
+}
+
+/* ==========================================
+   INNER EMBLEM
+========================================== */
+
+.site-shell .hero-emblem-inner {
+  display: grid;
+  place-items: center;
+
+  width: 170px;
+  height: 170px;
+
+  border-radius: 50%;
+
+  background: #ffffff1a;
+  border: 1px solid #ffffff44;
+}
+
+/* ==========================================
+   CARD BOTTOM HEADING
+========================================== */
+
+.site-shell .hero-card-bottom h3 {
+  margin: 7px 0 0;
+
+  font-size: 25px;
+  letter-spacing: -1px;
+}
+
+/* ==========================================
+   ACCESSIBILITY
+   Respect reduced-motion preference
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-shell .hero-main-card {
+    animation: none;
+    translate: 0 0;
+  }
+}
+
+/* Hero floating information cards */
+
+.site-shell .floating-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px 17px;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  background: var(--bg-card);
+  box-shadow: var(--shadow-md, 0 15px 40px #00000018);
+  z-index: 3;
+  animation: nexFloat 5s ease-in-out infinite;
+}
+
+.site-shell .floating-card-top {
+  top: 17%;
+  left: -4%;
+  animation-delay: -1s;
+}
+
+.site-shell .floating-card-bottom {
+  bottom: 16%;
+  right: -4%;
+  animation-delay: -3s;
+}
+
+.site-shell .floating-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.site-shell .floating-card strong,
+.site-shell .floating-card small {
+  display: block;
+  white-space: nowrap;
+}
+
+.site-shell .floating-card strong {
+  font-size: 13px;
+}
+
+.site-shell .floating-card small {
+  margin-top: 4px;
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+.site-shell .hero-decoration {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  background: var(--color-primary);
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+
+.site-shell .hero-decoration-one {
+  top: 10%;
+  right: 14%;
+}
+
+.site-shell .hero-decoration-two {
+  bottom: 9%;
+  left: 15%;
+  opacity: 0.5;
+}
+
+.site-shell .hero-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 50px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   INTRODUCTION
+========================================== */
+
+.site-shell .intro-section {
+  padding: 85px 0;
+  background: var(--bg-card);
+  border-block: 1px solid var(--border-color);
+}
+
+.site-shell .intro-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr auto;
+  gap: 55px;
+  align-items: center;
+}
+
+.site-shell .intro-heading h2,
+.site-shell .section-heading h2,
+.site-shell .benefits-intro h2,
+.site-shell .contact-content h2 {
+  margin: 17px 0 0;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.14;
+}
+
+.site-shell .intro-heading h2 span,
+.site-shell .section-heading h2 span,
+.site-shell .benefits-intro h2 span,
+.site-shell .contact-content h2 span {
+  color: var(--color-primary);
+}
+
+.site-shell .intro-copy p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 21px;
+}
+
+.site-shell .intro-stamp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
+  height: 135px;
+  gap: 3px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  transform: rotate(11deg);
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* ==========================================
+   PROGRAMS
+========================================== */
+
+.site-shell .programs-section {
+  padding: 105px 0;
+}
+
+.site-shell .section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.site-shell .section-heading-link {
+  margin-bottom: 9px;
+}
+
+.site-shell .programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 21px;
+}
+
+.site-shell .program-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+  padding: 28px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  background: var(--bg-card);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
+
+  /* Float independently from hover transform */
+  translate: 0 0;
+  animation: nexProgramFloat 6s ease-in-out infinite;
+}
+
+.site-shell .program-card:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.site-shell .program-card:nth-child(3) {
+  animation-delay: -4s;
+}
+
+/* Original program-card hover preserved */
+.site-shell .program-card:hover {
+  transform: translateY(-7px);
+  box-shadow: var(--shadow-md, 0 20px 40px #00000018);
+  border-color: var(--color-primary);
+}
+
+.site-shell .program-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+
+.site-shell .program-number {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-secondary);
+}
+
+.site-shell .program-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 15px;
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.site-shell .program-card h3 {
+  font-size: 23px;
+  letter-spacing: -0.6px;
+  margin-bottom: 12px;
+}
+
+.site-shell .program-card > p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.site-shell .program-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.site-shell .program-tags span {
+  font-size: 10px;
+  font-weight: 750;
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: var(--bg-sidebar);
+  color: var(--text-secondary);
+}
+
+.site-shell .program-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-color);
+  font-size: 13px;
+  font-weight: 750;
+  color: var(--color-primary) !important;
+}
+
+.site-shell .programs-disclaimer {
+  margin: 25px 0 0;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* ==========================================
+   BENEFITS
+========================================== */
+
+.site-shell .benefits-section {
+  padding: 105px 0;
+  background: var(--bg-card);
+}
+
+.site-shell .benefits-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 85px;
+  align-items: center;
+}
+
+.site-shell .benefits-intro > p {
+  max-width: 410px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin: 24px 0 29px;
+}
+
+.site-shell .benefits-list {
+  display: grid;
+  gap: 14px;
+}
+
+.site-shell .benefit-card {
+  display: grid;
+  grid-template-columns: 30px 54px 1fr 22px;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  background: var(--bg-main);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
+
+  translate: 0 0;
+  animation: nexBenefitFloat 7s ease-in-out infinite;
+}
+
+.site-shell .benefit-card:nth-child(2) {
+  animation-delay: -2.3s;
+}
+
+.site-shell .benefit-card:nth-child(3) {
+  animation-delay: -4.6s;
+}
+
+.site-shell .benefit-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md, 0 12px 28px #00000012);
+}
+
+.site-shell .benefit-number {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text-secondary);
+}
+
+.site-shell .benefit-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.site-shell .benefit-content h3 {
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+
+.site-shell .benefit-content p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.site-shell .benefit-arrow {
+  color: var(--color-primary);
+}
+
+/* ==========================================
+   CONTACT CTA
+========================================== */
+
+.site-shell .contact-section {
+  padding: 100px 0;
+}
+
+.site-shell .contact-panel {
+  position: relative;
+  overflow: hidden;
+  min-height: 365px;
+  display: flex;
+  align-items: center;
+  padding: 55px 70px;
+  border-radius: 25px;
+  background: linear-gradient(
+    125deg,
+    var(--bg-card),
+    var(--bg-sidebar)
+  );
+  border: 1px solid var(--border-color);
+}
+
+.site-shell .contact-content {
+  position: relative;
+  z-index: 1;
+}
+
+.site-shell .contact-content h2 {
+  font-size: clamp(42px, 4.6vw, 65px);
+}
+
+.site-shell .contact-content > p {
+  max-width: 500px;
+  margin: 20px 0 25px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.site-shell .contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.site-shell .contact-decoration {
+  position: absolute;
+  right: 9%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-12deg);
+  display: grid;
+  place-items: center;
+  width: 270px;
+  height: 270px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--color-primary);
+  opacity: 0.35;
+}
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+.site-shell [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-shell [data-reveal]:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  .site-shell [data-reveal="left"]:not(.is-visible) {
+    transform: translateX(-30px);
+  }
+
+  .site-shell [data-reveal="right"]:not(.is-visible) {
+    transform: translateX(30px);
+  }
+
+  .site-shell [data-reveal="scale"]:not(.is-visible) {
+    transform: scale(0.96);
+  }
+
+  .site-shell [data-reveal] {
+    transition:
+      opacity 0.65s ease,
+      transform 0.65s ease;
+  }
+}
+
+/* ==========================================
+   FLOATING ANIMATION KEYFRAMES
+========================================== */
+
+@keyframes nexFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -11px;
+  }
+}
+
+@keyframes nexProgramFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -5px;
+  }
+}
+
+@keyframes nexBenefitFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -3px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+  .site-shell .nav-links {
+    gap: 20px;
+  }
+
+  .site-shell .hero-grid {
+    gap: 25px;
+  }
+
+  .site-shell .hero-content h1 {
+    font-size: clamp(48px, 5.3vw, 68px);
+  }
+
+  .site-shell .floating-card-top {
+    left: -2%;
+  }
+
+  .site-shell .floating-card-bottom {
+    right: -2%;
+  }
+
+  .site-shell .intro-grid {
+    gap: 30px;
+  }
+
+  .site-shell .benefits-layout {
+    gap: 40px;
+  }
+
+  .site-shell .footer-main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-shell .footer-links {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+
+/* ==========================================
+   MOBILE NAVIGATION + TABLET LAYOUT
+========================================== */
+
+@media (max-width: 800px) {
+  .site-shell .container {
+    width: min(calc(100% - 36px), 640px);
+  }
+
+  .site-shell .navbar-inner {
+    min-height: 76px;
+  }
+
+  .site-shell .nav-desktop-cta {
+    display: none;
+  }
+
+  .site-shell .mobile-menu-toggle {
+    display: grid;
+  }
+
+  .site-shell .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px 20px 22px;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md, 0 12px 30px #00000015);
+  }
+
+  .site-shell .nav-links.nav-links-open {
+    display: flex;
+  }
+
+  .site-shell .nav-links > a:not(.btn) {
+    padding: 13px 7px;
+  }
+
+  .site-shell .nav-mobile-cta {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .site-shell .hero-section {
+    padding: 58px 0 50px;
+  }
+
+  .site-shell .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .site-shell .hero-content h1 {
+    font-size: clamp(46px, 9vw, 69px);
+  }
+
+  .site-shell .hero-visual {
+    min-height: 485px;
+  }
+
+  .site-shell .hero-scroll {
+    margin-top: 25px;
+  }
+
+  .site-shell .intro-section,
+  .site-shell .programs-section,
+  .site-shell .benefits-section,
+  .site-shell .contact-section {
+    padding: 70px 0;
+  }
+
+  .site-shell .intro-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-shell .intro-stamp {
+    display: none;
+  }
+
+  .site-shell .programs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-shell .benefits-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .site-shell .contact-panel {
+    padding: 48px 35px;
+  }
+
+  .site-shell .contact-decoration {
+    right: -75px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 560px) {
+  .site-shell .container {
+    width: calc(100% - 32px);
+  }
+
+  .site-shell .brand-copy strong {
+    font-size: 20px;
+  }
+
+  .site-shell .brand-copy small {
+    font-size: 8px;
+  }
+
+  .site-shell .brand-mark {
+    width: 42px;
+    height: 42px;
+  }
+
+  .site-shell .nav-actions {
+    gap: 8px;
+  }
+
+  .site-shell .theme-toggle,
+  .site-shell .mobile-menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .site-shell .hero-content h1 {
+    font-size: clamp(43px, 10vw, 58px);
+  }
+
+  .site-shell .hero-description {
+    font-size: 15px;
+  }
+
+  .site-shell .hero-actions .btn {
+    flex: 1 1 auto;
+  }
+
+  .site-shell .hero-visual {
+    min-height: 385px;
+  }
+
+  .site-shell .hero-main-card {
+    height: 330px;
+    width: min(270px, 74%);
+    padding: 18px;
+    border-radius: 21px;
+  }
+
+  .site-shell .hero-emblem {
+    width: 155px;
+    height: 155px;
+  }
+
+  .site-shell .hero-emblem-inner {
+    width: 116px;
+    height: 116px;
+  }
+
+  .site-shell .hero-emblem-inner svg {
+    width: 50px;
+  }
+
+  .site-shell .hero-card-bottom h3 {
+    font-size: 18px;
+  }
+
+  .site-shell .hero-card-kicker,
+  .site-shell .hero-card-caption {
+    font-size: 8px;
+  }
+
+  .site-shell .floating-card {
+    padding: 9px;
+    gap: 7px;
+  }
+
+  .site-shell .floating-card-top {
+    top: 12%;
+    left: 0;
+  }
+
+  .site-shell .floating-card-bottom {
+    bottom: 9%;
+    right: 0;
+  }
+
+  .site-shell .floating-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .site-shell .floating-card strong {
+    font-size: 10px;
+  }
+
+  .site-shell .floating-card small {
+    font-size: 8px;
+  }
+
+  .site-shell .intro-grid,
+  .site-shell .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-shell .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .site-shell .program-card {
+    min-height: 310px;
+  }
+
+  .site-shell .benefit-card {
+    grid-template-columns: 22px 42px 1fr;
+    gap: 11px;
+    padding: 15px;
+  }
+
+  .site-shell .benefit-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .site-shell .benefit-arrow {
+    display: none;
+  }
+
+  .site-shell .benefit-content h3 {
+    font-size: 15px;
+  }
+
+  .site-shell .contact-panel {
+    padding: 35px 23px;
+    min-height: 330px;
+  }
+
+  .site-shell .contact-decoration {
+    opacity: 0.12;
+  }
+
+  .site-shell .contact-actions .btn {
+    width: 100%;
+  }
+
+  .site-shell .footer-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .site-shell .footer-links {
+    grid-column: auto;
+    justify-content: flex-start;
+  }
+
+  .site-shell .footer-bottom {
+    flex-direction: column;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-shell .floating-card,
+  .site-shell .program-card,
+  .site-shell .benefit-card {
+    animation: none;
+    translate: none;
+  }
+
+  .site-shell *,
+  .site-shell *::before,
+  .site-shell *::after {
+    transition: none !important;
+  }
+}
+
+/* Responsive footer */
+@media (max-width: 800px) {
+  .site-shell .footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-shell .nav-links,
+  .site-shell .nav-links > a,
+  .site-shell .mobile-menu-toggle,
+  .site-shell .footer-social-link,
+  .site-shell .footer-contact-icon,
+  .site-shell .footer-credit a {
+    transition: none;
+  }
+}
+
+
+/* ==========================================
+   FIX: CONSISTENT SHARED NAVBAR
+   Applies to Home, Programs, About and Contact
+========================================== */
+
+/* Keep navbar spacing consistent across pages */
+.navbar .navbar-inner {
+  gap: 28px;
+}
+
+.navbar .nav-links {
+  gap: 7px;
+}
+
+/* Desktop: only the right-side login button */
+.navbar .nav-links .nav-mobile-cta {
+  display: none !important;
+}
+
+.navbar .nav-actions .nav-desktop-cta {
+  display: inline-flex;
+}
+
+/* Tablet and mobile: use the shared Navbar.css layout */
+@media (max-width: 1000px) {
+  .navbar .navbar-inner {
+    gap: 16px;
+  }
+
+  .navbar .nav-links {
+    gap: 2px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar .navbar-inner {
+    min-height: 72px;
+    gap: 12px;
+  }
+
+  .navbar .nav-links {
+    display: flex;
+    gap: 8px;
+  }
+
+  .navbar .nav-actions .nav-desktop-cta {
+    display: none !important;
+  }
+
+  .navbar .nav-links .nav-mobile-cta {
+    display: none !important;
+  }
+
+  .navbar .nav-links.is-open .nav-mobile-cta,
+  .navbar .nav-links.nav-links-open .nav-mobile-cta {
+    display: inline-flex !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar .navbar-inner {
+    min-height: 68px;
+    gap: 8px;
+  }
+}
+
+/* Fix shared navbar alignment across all public pages */
+.navbar .navbar-inner {
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-content: initial;
+  gap: 24px;
+}
+
+.navbar .brand {
+  justify-self: start;
+}
+
+.navbar .nav-links {
+  justify-self: center;
+  gap: 7px;
+}
+
+.navbar .nav-actions {
+  justify-self: end;
+  gap: 12px;
+}
+
+@media (max-width: 1000px) {
+  .navbar .navbar-inner {
+    gap: 14px;
+  }
+
+  .navbar .nav-links {
+    gap: 2px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar .navbar-inner {
+    display: flex !important;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .navbar .nav-links {
+    justify-self: auto;
+  }
+
+  .navbar .nav-actions {
+    margin-left: auto;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,399 @@
+/* ==========================================
+   NEXLEARN SHARED NAVBAR
+   Responsive • Theme-aware • Accessible
+========================================== */
+
+/* ---------- Base / Header ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  isolation: isolate;
+  width: 100%;
+  background: var(--surface, #DDE1DE);
+  border-bottom: 1px solid var(--border, #AEB6B3);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.navbar,
+.navbar * {
+  box-sizing: border-box;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 82px;
+}
+
+/* ---------- Brand ---------- */
+.navbar .brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 11px;
+  color: var(--text-primary, #2F3E46);
+  text-decoration: none;
+}
+
+.navbar .brand-mark {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  color: #FFFFFF;
+  background: #52796F;
+  border-radius: 14px;
+}
+
+.navbar .brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.navbar .brand-copy strong {
+  font-size: 21px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+  line-height: 1.1;
+}
+
+.navbar .brand-copy small {
+  color: var(--text-secondary, #5E6B66);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+}
+
+/* ---------- Desktop Navigation ---------- */
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.navbar .nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 14px;
+  color: var(--text-secondary, #5E6B66);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 10px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--text-primary, #2F3E46);
+  background: var(--table-hover, #D3D8D5);
+}
+
+.navbar .nav-link.active {
+  color: var(--primary, #52796F);
+  background: var(--accent, #CAD2C5);
+}
+
+/* ---------- Actions / Buttons ---------- */
+.navbar .nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.navbar .theme-toggle,
+.navbar .mobile-menu-toggle {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  padding: 0;
+  color: var(--text-primary, #2F3E46);
+  background: transparent;
+  border: 1px solid var(--border, #AEB6B3);
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar .theme-toggle:hover,
+.navbar .mobile-menu-toggle:hover {
+  background: var(--table-hover, #D3D8D5);
+}
+
+.navbar .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 45px;
+  padding: 0 17px;
+  color: #FFFFFF;
+  background: var(--primary, #52796F);
+  border: 1px solid var(--primary, #52796F);
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.navbar .btn-primary:hover {
+  background: #41665C;
+  transform: translateY(-1px);
+}
+
+/* IMPORTANT: one login CTA on desktop only. */
+.navbar .nav-mobile-cta,
+.navbar .mobile-menu-toggle {
+  display: none;
+}
+
+/* Visible keyboard focus */
+.navbar .nav-link:focus-visible,
+.navbar button:focus-visible,
+.navbar .brand:focus-visible,
+.navbar .btn:focus-visible {
+  outline: 3px solid var(--primary, #52796F);
+  outline-offset: 4px;
+}
+
+/* ---------- Dark Theme ---------- */
+:root[data-theme='dark'] .navbar {
+  background: #172421;
+  border-bottom-color: #2D3B37;
+}
+
+:root[data-theme='dark'] .navbar .brand,
+:root[data-theme='dark'] .navbar .theme-toggle,
+:root[data-theme='dark'] .navbar .mobile-menu-toggle {
+  color: #E8EFE9;
+}
+
+:root[data-theme='dark'] .navbar .brand-copy small,
+:root[data-theme='dark'] .navbar .nav-link {
+  color: #B7C6BF;
+}
+
+:root[data-theme='dark'] .navbar .nav-link:hover {
+  color: #E8EFE9;
+  background: #24332F;
+}
+
+:root[data-theme='dark'] .navbar .nav-link.active {
+  color: #E8EFE9;
+  background: #2D4039;
+}
+
+:root[data-theme='dark'] .navbar .theme-toggle,
+:root[data-theme='dark'] .navbar .mobile-menu-toggle {
+  border-color: #354640;
+}
+
+:root[data-theme='dark'] .navbar .theme-toggle:hover,
+:root[data-theme='dark'] .navbar .mobile-menu-toggle:hover {
+  background: #24332F;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1000px) {
+  .navbar-inner {
+    gap: 16px;
+  }
+
+  .navbar .nav-links {
+    gap: 2px;
+  }
+
+  .navbar .nav-link {
+    padding-inline: 10px;
+    font-size: 13px;
+  }
+
+  .navbar .nav-actions {
+    gap: 8px;
+  }
+
+  .navbar .nav-actions .nav-desktop-cta {
+    padding-inline: 12px;
+  }
+}
+
+/* ---------- Mobile / Small Tablet ---------- */
+@media (max-width: 800px) {
+  .navbar-inner {
+    min-height: 72px;
+    gap: 12px;
+  }
+
+  .navbar .brand-mark {
+    width: 41px;
+    height: 41px;
+    border-radius: 12px;
+  }
+
+  .navbar .brand-copy strong {
+    font-size: 19px;
+  }
+
+  .navbar .brand-copy small {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .navbar .nav-actions {
+    position: relative;
+    z-index: 1003;
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .navbar .nav-actions .nav-desktop-cta {
+    display: none !important;
+  }
+
+  .navbar .nav-actions .mobile-menu-toggle {
+    position: relative;
+    z-index: 1004;
+    display: grid !important;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar .nav-links {
+    position: fixed;
+    top: 72px;
+    right: 0;
+    bottom: 0;
+    z-index: 1002;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 8px;
+    width: min(360px, 88vw);
+    height: calc(100vh - 72px);
+    height: calc(100dvh - 72px);
+    padding: 24px 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--surface, #DDE1DE);
+    border-left: 1px solid var(--border, #AEB6B3);
+    box-shadow: -18px 12px 35px rgb(25 40 35 / 10%);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(16px);
+    transition: transform 0.22s ease, opacity 0.22s ease, visibility 0.22s ease;
+  }
+
+  .navbar .nav-links.is-open,
+  .navbar .nav-links.nav-links-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+
+  .navbar .nav-link {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 49px;
+    padding-inline: 16px;
+    font-size: 15px;
+  }
+
+  /* The mobile CTA exists only inside the mobile navigation panel. */
+  .navbar .nav-links .nav-mobile-cta {
+    display: none;
+    width: 100%;
+    min-height: 49px;
+    margin-top: 10px;
+  }
+
+  .navbar .nav-links.is-open .nav-mobile-cta,
+  .navbar .nav-links.nav-links-open .nav-mobile-cta {
+    display: inline-flex;
+  }
+
+  :root[data-theme='dark'] .navbar .nav-links {
+    background: #172421;
+    border-left-color: #2D3B37;
+    box-shadow: -18px 12px 35px rgb(0 0 0 / 25%);
+  }
+}
+
+/* ---------- Small Phones ---------- */
+@media (max-width: 420px) {
+  .navbar-inner {
+    min-height: 68px;
+    gap: 8px;
+  }
+
+  .navbar .brand {
+    gap: 8px;
+  }
+
+  .navbar .brand-mark {
+    width: 37px;
+    height: 37px;
+    border-radius: 11px;
+  }
+
+  .navbar .brand-copy strong {
+    font-size: 17px;
+  }
+
+  .navbar .brand-copy small {
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .navbar .theme-toggle,
+  .navbar .mobile-menu-toggle {
+    width: 39px;
+    height: 39px;
+  }
+
+  .navbar .nav-links {
+    top: 68px;
+    height: calc(100vh - 68px);
+    height: calc(100dvh - 68px);
+  }
+
+  .navbar .nav-actions .mobile-menu-toggle {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+/* ---------- Reduced Motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .navbar *,
+  .navbar *::before,
+  .navbar *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

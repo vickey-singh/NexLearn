@@ -1,0 +1,391 @@
+/* ==========================================
+   NEXLEARN FOOTER
+   Soft Silver Grey + Faded Sage Green
+========================================== */
+
+.site-footer {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  overflow: hidden;
+  color: var(--text-primary, #2F3E46);
+  background: #C4C9C7;
+  border-top: 1px solid #B4BCB8;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.site-footer,
+.site-footer * {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   MAIN FOOTER LAYOUT
+========================================== */
+
+.site-footer .footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: clamp(36px, 7vw, 100px);
+  padding-top: 58px;
+  padding-bottom: 48px;
+}
+
+/* ==========================================
+   BRAND SECTION
+========================================== */
+
+.site-footer .footer-brand-section {
+  max-width: 480px;
+}
+
+.site-footer .footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer .brand-mark {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  color: #F7F9F7;
+  background: #66877D;
+  border-radius: 14px;
+}
+
+.site-footer .brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.site-footer .brand-copy strong {
+  color: #35443F;
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+  line-height: 1.1;
+}
+
+.site-footer .brand-copy small {
+  color: #68756F;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.site-footer .footer-description {
+  max-width: 390px;
+  margin: 22px 0 24px;
+  color: #66736D;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ==========================================
+   SOCIAL LINKS
+   Soft, low-contrast surfaces
+========================================== */
+
+.site-footer .footer-socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site-footer .footer-social-link {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: #65756D;
+  background: rgb(221 225 222 / 42%);
+  border: 1px solid rgb(120 136 128 / 32%);
+  border-radius: 12px;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.site-footer .footer-social-link:hover {
+  color: #FFFFFF;
+  background: #66877D;
+  border-color: #66877D;
+  transform: translateY(-2px);
+}
+
+.site-footer .footer-social-link:focus-visible,
+.site-footer a:focus-visible {
+  outline: 3px solid #66877D;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.site-footer .footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.site-footer .footer-contact h3 {
+  margin: 0 0 4px;
+  color: #35443F;
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -0.35px;
+}
+
+.site-footer .footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer .footer-contact-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  color: #66877D;
+  background: rgb(202 210 197 / 55%);
+  border: 1px solid rgb(120 136 128 / 30%);
+  border-radius: 11px;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.site-footer .footer-contact-item:hover .footer-contact-icon {
+  color: #FFFFFF;
+  background: #66877D;
+}
+
+.site-footer .footer-contact-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+.site-footer .footer-contact-copy small {
+  color: #6D7973;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.site-footer .footer-contact-copy strong {
+  color: #35443F;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.site-footer .footer-contact-item:hover .footer-contact-copy strong {
+  color: #52796F;
+}
+
+/* ==========================================
+   FOOTER BOTTOM
+========================================== */
+
+.site-footer .footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  min-height: 74px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid rgb(120 136 128 / 30%);
+}
+
+.site-footer .footer-bottom > span,
+.site-footer .footer-credit {
+  color: #68756F;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.site-footer .footer-credit {
+  margin: 0;
+}
+
+.site-footer .footer-credit a {
+  color: #52796F;
+  font-weight: 750;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer .footer-credit a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ==========================================
+   DARK MODE
+   Deep Green Charcoal + Sage Green
+========================================== */
+
+:root[data-theme='dark'] .site-footer {
+  color: #E8EFE9;
+  background: #172421;
+  border-top-color: #2D3B37;
+}
+
+:root[data-theme='dark'] .site-footer .brand-copy strong,
+:root[data-theme='dark'] .site-footer .footer-contact h3,
+:root[data-theme='dark'] .site-footer .footer-contact-copy strong {
+  color: #E8EFE9;
+}
+
+:root[data-theme='dark'] .site-footer .brand-copy small,
+:root[data-theme='dark'] .site-footer .footer-description,
+:root[data-theme='dark'] .site-footer .footer-contact-copy small,
+:root[data-theme='dark'] .site-footer .footer-bottom > span,
+:root[data-theme='dark'] .site-footer .footer-credit {
+  color: #B7C6BF;
+}
+
+:root[data-theme='dark'] .site-footer .brand-mark {
+  color: #FFFFFF;
+  background: #52796F;
+}
+
+:root[data-theme='dark'] .site-footer .footer-social-link {
+  color: #B7C6BF;
+  background: rgb(36 51 47 / 65%);
+  border-color: #354640;
+}
+
+:root[data-theme='dark'] .site-footer .footer-social-link:hover {
+  color: #FFFFFF;
+  background: #52796F;
+  border-color: #52796F;
+}
+
+:root[data-theme='dark'] .site-footer .footer-contact-icon {
+  color: #B9D0C3;
+  background: rgb(36 51 47 / 75%);
+  border-color: #354640;
+}
+
+:root[data-theme='dark'] .site-footer .footer-contact-item:hover .footer-contact-icon {
+  color: #FFFFFF;
+  background: #52796F;
+}
+
+:root[data-theme='dark'] .site-footer .footer-contact-item:hover .footer-contact-copy strong {
+  color: #B9D0C3;
+}
+
+:root[data-theme='dark'] .site-footer .footer-bottom {
+  border-top-color: #2D3B37;
+}
+
+:root[data-theme='dark'] .site-footer .footer-credit a {
+  color: #B9D0C3;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 800px) {
+  .site-footer .footer-main {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 38px;
+    padding-top: 46px;
+    padding-bottom: 38px;
+  }
+
+  .site-footer .footer-description {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 560px) {
+  .site-footer .footer-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+    padding-top: 38px;
+    padding-bottom: 32px;
+  }
+
+  .site-footer .footer-brand-section {
+    max-width: 100%;
+  }
+
+  .site-footer .brand-mark {
+    width: 43px;
+    height: 43px;
+  }
+
+  .site-footer .brand-copy strong {
+    font-size: 20px;
+  }
+
+  .site-footer .footer-description {
+    max-width: 100%;
+    margin-top: 18px;
+    margin-bottom: 20px;
+  }
+
+  .site-footer .footer-contact {
+    gap: 17px;
+  }
+
+  .site-footer .footer-contact h3 {
+    margin-bottom: 2px;
+  }
+
+  .site-footer .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 18px;
+    padding-bottom: 20px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer *,
+  .site-footer *::before,
+  .site-footer *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,87 @@
+
+/* =========================================
+   NEXLEARN — LIGHT MODE
+   Silver Grey + Sage Green
+========================================= */
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* Backgrounds */
+  --bg-main: #B7BCBB;
+  --bg-card: #DDE1DE;
+  --bg-sidebar: #C8D0CB;
+  --bg-elevated: #E5E8E5;
+
+  /* Brand colours */
+  --color-primary: #52796F;
+  --color-primary-hover: #43665D;
+  --color-accent: #CAD2C5;
+
+  /* Text */
+  --text-primary: #2F3E46;
+  --text-secondary: #5E6B66;
+  --text-inverse: #FFFFFF;
+
+  /* Borders and tables */
+  --border-color: #AEB6B3;
+  --table-row-hover: #D3D8D5;
+
+  /* Feedback colours */
+  --color-success: #2F6B4F;
+  --color-warning: #95651D;
+  --color-danger: #B54747;
+  --color-info: #356A8A;
+
+  /* Effects */
+  --shadow-sm: 0 2px 6px rgb(47 62 70 / 8%);
+  --shadow-md: 0 8px 24px rgb(47 62 70 / 10%);
+
+  /* Shared layout */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  --transition-fast: 180ms ease;
+}
+
+/* =========================================
+   NEXLEARN — DARK MODE
+   Deep Green Charcoal + Sage Green
+========================================= */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --bg-main: #121E1C;
+  --bg-card: #1C2926;
+  --bg-sidebar: #172421;
+  --bg-elevated: #24332F;
+
+  /* Brand colours */
+  --color-primary: #52796F;
+  --color-primary-hover: #648B80;
+  --color-accent: #CAD2C5;
+
+  /* Text */
+  --text-primary: #E8EFE9;
+  --text-secondary: #B7C6BF;
+  --text-inverse: #FFFFFF;
+
+  /* Borders and tables */
+  --border-color: #2D3B37;
+  --table-row-hover: #24332F;
+
+  /* Feedback colours */
+  --color-success: #81C9A0;
+  --color-warning: #E5BE78;
+  --color-danger: #F09A9A;
+  --color-info: #8DC4E2;
+
+  /* Effects */
+  --shadow-sm: 0 2px 6px rgb(0 0 0 / 15%);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 25%);
+}
