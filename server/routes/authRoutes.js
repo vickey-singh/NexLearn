@@ -30,7 +30,10 @@ const loginLimiter = rateLimit({
 const getCookieOptions = () => ({
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
-    sameSite: 'lax',
+    sameSite:
+        process.env.NODE_ENV === 'production'
+            ? 'none'
+            : 'lax',
     path: '/',
     maxAge: 8 * 60 * 60 * 1000,
 })
@@ -74,13 +77,20 @@ router.post('/login', loginLimiter, async (req, res, next) => {
             role: normalizedRole,
         }).select('+password')
 
-        // Use the same response for invalid credentials.
+        // ======================================
+        // INVALID USER CHECK
+        // ======================================
+
         if (!user || !user.isActive) {
             return res.status(401).json({
                 success: false,
                 message: 'Invalid email or password.',
             })
         }
+
+        // ======================================
+        // PASSWORD VERIFICATION
+        // ======================================
 
         const passwordMatches = await user.comparePassword(password)
 
@@ -91,9 +101,19 @@ router.post('/login', loginLimiter, async (req, res, next) => {
             })
         }
 
+        // ======================================
+        // JWT SECRET CHECK
+        // ======================================
+
         if (!process.env.JWT_SECRET) {
-            throw new Error('JWT_SECRET is missing from environment variables')
+            throw new Error(
+                'JWT_SECRET is missing from environment variables'
+            )
         }
+
+        // ======================================
+        // GENERATE JWT TOKEN
+        // ======================================
 
         const token = jwt.sign(
             {
@@ -107,6 +127,10 @@ router.post('/login', loginLimiter, async (req, res, next) => {
             }
         )
 
+        // ======================================
+        // SET AUTHENTICATION COOKIE
+        // ======================================
+
         res.cookie('token', token, getCookieOptions())
 
         return res.status(200).json({
@@ -119,6 +143,7 @@ router.post('/login', loginLimiter, async (req, res, next) => {
                 role: user.role,
             },
         })
+
     } catch (error) {
         next(error)
     }
@@ -142,10 +167,17 @@ router.get('/me', protect, (req, res) => {
 // ======================================
 
 router.post('/logout', (req, res) => {
+
+    // Clear cookie using the same attributes
+    // used when setting the authentication cookie.
+
     res.clearCookie('token', {
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
-        sameSite: 'lax',
+        sameSite:
+            process.env.NODE_ENV === 'production'
+                ? 'none'
+                : 'lax',
         path: '/',
     })
 
