@@ -1,3 +1,4 @@
+
 /* ==========================================
    NEXLEARN ABOUT PAGE
    Silver Grey + Sage Green
@@ -54,7 +55,9 @@
   outline-offset: 4px;
 }
 
-/* ---------- Shared typography ---------- */
+/* ==========================================
+   SHARED TYPOGRAPHY
+========================================== */
 
 .about-eyebrow {
   display: inline-flex;
@@ -100,7 +103,9 @@
   line-height: 1.85;
 }
 
-/* ---------- Buttons ---------- */
+/* ==========================================
+   BUTTONS
+========================================== */
 
 .about-hero-actions {
   display: flex;
@@ -178,19 +183,73 @@
 
 .about-hero {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: clamp(58px, 8vw, 100px) 0 clamp(66px, 8vw, 104px);
+
   background:
-    radial-gradient(ellipse at 78% 35%, rgb(202 210 197 / 65%), transparent 38%),
-    linear-gradient(135deg, var(--about-bg), var(--about-surface-soft));
+    radial-gradient(
+      ellipse at 78% 35%,
+      rgb(202 210 197 / 65%),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      var(--about-bg),
+      var(--about-surface-soft)
+    );
 }
 
-:root[data-theme='dark'] .about-hero {
-  background:
-    radial-gradient(ellipse at 78% 35%, rgb(82 121 111 / 20%), transparent 40%),
-    linear-gradient(135deg, #121E1C, #172421);
+/* Light mode educational background */
+
+:root:not([data-theme='dark']) .about-page .about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(221, 225, 222, 0.94) 0%,
+      rgba(221, 225, 222, 0.78) 48%,
+      rgba(221, 225, 222, 0.55) 100%
+    ),
+    url("/images/about-campus-3d.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark mode educational background */
+
+:root[data-theme='dark'] .about-page .about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(18, 30, 28, 0.97) 0%,
+      rgba(18, 30, 28, 0.93) 48%,
+      rgba(18, 30, 28, 0.86) 100%
+    ),
+    url("/images/about-campus-3d.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .about-hero-grid {
+  position: relative;
+  z-index: 1;
+
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.88fr);
   align-items: center;
@@ -242,7 +301,9 @@
   color: var(--about-primary);
 }
 
-/* ---------- Floating hero illustration ---------- */
+/* ==========================================
+   HERO IMAGE / VISUAL
+========================================== */
 
 .about-hero-visual {
   position: relative;
@@ -491,6 +552,98 @@
   right: -3px;
   bottom: 65px;
   animation-delay: -2.1s;
+}
+
+/* ==========================================
+   ABOUT IMAGE - NORMAL FOREGROUND IMAGE
+========================================== */
+
+.about-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(82, 121, 111, 0.25);
+  background: #DDE1DE;
+  box-shadow: 0 24px 60px rgba(18, 45, 35, 0.16);
+  z-index: 1;
+}
+
+.about-hero-image {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  object-position: center;
+
+  /* Light mode original brightness */
+  filter: brightness(1) saturate(1);
+
+  transition:
+    transform 0.7s ease,
+    filter 0.4s ease;
+}
+
+/* Dark mode image brightness */
+
+:root[data-theme='dark'] .about-page .about-hero-image {
+  filter: brightness(0.84) saturate(0.90);
+}
+
+.about-image-frame:hover .about-hero-image {
+  transform: scale(1.035);
+}
+
+:root[data-theme='dark'] .about-image-frame:hover .about-hero-image {
+  filter: brightness(0.90) saturate(0.95);
+}
+
+/* Image caption */
+
+.about-image-caption {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  background: rgba(18, 30, 28, 0.86);
+  color: #F1F4F0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.about-image-caption-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #52796F;
+  color: #FFFFFF;
+}
+
+.about-image-caption > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.about-image-caption strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.about-image-caption small {
+  font-size: 11px;
+  color: #D1DED7;
 }
 
 /* ==========================================
@@ -954,6 +1107,16 @@
    TABLET
 ========================================== */
 
+@media (max-width: 1024px) {
+  .about-hero-image {
+    height: 380px;
+  }
+
+  .about-image-frame {
+    max-width: 500px;
+  }
+}
+
 @media (max-width: 900px) {
   .about-hero-grid {
     grid-template-columns: minmax(0, 1fr) minmax(310px, 0.9fr);
@@ -1008,6 +1171,21 @@
 /* ==========================================
    MOBILE
 ========================================== */
+
+@media (max-width: 768px) {
+  .about-hero-image {
+    height: 350px;
+  }
+
+  .about-image-frame {
+    max-width: 520px;
+  }
+
+  .about-hero-visual {
+    width: 100%;
+    margin-top: 25px;
+  }
+}
 
 @media (max-width: 680px) {
   .about-container {

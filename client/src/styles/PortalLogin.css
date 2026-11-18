@@ -1,36 +1,62 @@
 /* NexLearn Portal Login — responsive theme-aware styles */
 
 .portal-login {
-    --login-bg:#B7BCBB;
-    --login-panel:#DDE1DE;
-    --login-panel-strong:#E7EAE7;
-    --login-primary:#52796F;
-    --login-accent:#CAD2C5;
-    --login-text:#2F3E46;
-    --login-muted:#5E6B66;
-    --login-border:#AEB6B3;
-    position:relative;
-    isolation:isolate;
-    min-height:100vh;
-    overflow:hidden;
-    padding:26px clamp(20px,5.5vw,88px) 30px;
-    color:var(--login-text);
-    background:radial-gradient(ellipse at 12% 18%,rgba(221,225,222,.82),transparent 34%),
-  radial-gradient(ellipse at 62% 80%,rgba(82,121,111,.13),transparent 36%),var(--login-bg);
-    transition:background-color .35s ease,color .35s ease;
+  --login-bg: #B7BCBB;
+  --login-panel: #DDE1DE;
+  --login-panel-strong: #E7EAE7;
+  --login-primary: #52796F;
+  --login-accent: #CAD2C5;
+  --login-text: #2F3E46;
+  --login-muted: #5E6B66;
+  --login-border: #AEB6B3;
+
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 26px clamp(20px, 5.5vw, 88px) 30px;
+  color: var(--login-text);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(183, 188, 187, 0.94) 0%,
+      rgba(183, 188, 187, 0.84) 48%,
+      rgba(183, 188, 187, 0.72) 100%
+    ),
+    url("/images/portal-login-3d.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 
 .portal-login.theme-dark {
-    --login-bg:#121E1C;
-    --login-panel:#1C2926;
-    --login-panel-strong:#24332F;
-    --login-primary:#86A99A;
-    --login-accent:#2C4039;
-    --login-text:#E8EFE9;
-    --login-muted:#B7C6BF;
-    --login-border:#2D3B37;
-    background:radial-gradient(ellipse at 12% 15%,rgba(82,121,111,.16),transparent 34%),
-  radial-gradient(ellipse at 75% 80%,rgba(134,169,154,.09),transparent 36%),var(--login-bg);
+  --login-bg: #121E1C;
+  --login-panel: #1C2926;
+  --login-panel-strong: #24332F;
+  --login-primary: #86A99A;
+  --login-accent: #2C4039;
+  --login-text: #E8EFE9;
+  --login-muted: #B7C6BF;
+  --login-border: #2D3B37;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 30, 28, 0.96) 0%,
+      rgba(18, 30, 28, 0.91) 48%,
+      rgba(18, 30, 28, 0.84) 100%
+    ),
+    url("/images/portal-login-3d.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 .portal-login *, .portal-login *::before, .portal-login *::after {
@@ -1268,4 +1294,22 @@
     .portal-option small {
         font-size: 9px;
     }
+}
+
+
+.portal-login {
+  /* Baaki existing properties same rahengi */
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(183, 188, 187, 0.94) 0%,
+      rgba(183, 188, 187, 0.82) 48%,
+      rgba(183, 188, 187, 0.68) 100%
+    ),
+    url("/images/portal-login-3d.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

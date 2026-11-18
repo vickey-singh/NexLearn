@@ -333,3 +333,166 @@
     animation: none !important;
   }
 }
+
+
+/* ======================================
+   NEXLEARN 3D HERO IMAGE
+====================================== */
+
+.home-hero-visual {
+  position: relative;
+  isolation: isolate;
+  min-width: 0;
+}
+
+.home-hero-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin-inline: auto;
+  overflow: visible;
+  z-index: 1;
+}
+
+.home-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 22px 28px rgba(24, 55, 44, 0.12));
+  animation: homeHeroImageFloat 6s ease-in-out infinite;
+}
+
+@keyframes homeHeroImageFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Keep floating information cards above image */
+
+.home-float-chip {
+  z-index: 3;
+}
+
+/* Respect reduced-motion preference */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero-image {
+    animation: none;
+  }
+}
+
+/* ======================================
+   TABLET
+====================================== */
+
+@media (max-width: 1024px) {
+  .home-hero-image-wrap {
+    max-width: 580px;
+  }
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 768px) {
+  .home-hero-visual {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .home-hero-image-wrap {
+    max-width: 520px;
+  }
+
+  .home-hero-image {
+    animation: none;
+  }
+
+  .home-float-chip {
+    transform: scale(0.88);
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero-image-wrap {
+    max-width: 100%;
+  }
+
+  .home-float-chip {
+    transform: scale(0.78);
+  }
+}
+
+/* ======================================
+   NEXLEARN EDUCATIONAL HERO BACKGROUND
+====================================== */
+
+.home-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+/* Large educational image in background */
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      var(--home-bg, rgba(221, 225, 222, 0.96)) 0%,
+      rgba(221, 225, 222, 0.72) 48%,
+      rgba(183, 188, 187, 0.48) 100%
+    ),
+    url("/images/home.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.32;
+}
+
+/* Soft educational atmosphere */
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(82, 121, 111, 0.15),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(202, 210, 197, 0.22),
+      transparent 35%
+    );
+}
+
+/* Keep actual hero content visible */
+
+.home-hero-grid,
+.home-scroll-link {
+  position: relative;
+  z-index: 1;
+}
