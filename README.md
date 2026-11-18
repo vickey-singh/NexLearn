@@ -1,174 +1,192 @@
+<div align="center">
+
+<img src="https://img.shields.io/badge/NEXLEARN-INSTITUTE%20MANAGEMENT-52796F?style=for-the-badge&labelColor=172421" />
+
 # ✦ NexLearn
 
-### Institute Management System
+### Smart Institute Management. Simplified.
 
-\<p align="center">
-&#x20; \*\*A Smarter Way to Manage, Teach & Learn.\*\*
+A modern digital platform designed to bring institute administration, academic activities and student services together in one connected ecosystem.
 
-A modern digital platform concept designed to bring institute administration, academic activities, and student services together in one place.
+<br/>
 
-\</p>
+<a href="https://nexlearn-demo.vercel.app/">
+  <img src="https://img.shields.io/badge/EXPLORE%20LIVE%20WEBSITE-52796F?style=for-the-badge&logo=googlechrome&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://github.com/vickey-singh/NexLearn">
+  <img src="https://img.shields.io/badge/VIEW%20SOURCE%20CODE-24332F?style=for-the-badge&logo=github&logoColor=white" />
+</a>
 
-\<p align="center">   \*\*[🌐 Live Website]\([https://nexlearn-demo.vercel.app/)\*\*](https://nexlearn-demo.vercel.app/\)**) &nbsp; | &nbsp;   \*\*[💻 GitHub Repository]\([https://github.com/vickey-singh/NexLearn)\*\*](https://github.com/vickey-singh/NexLearn\)**) \</p>
+<br/><br/>
 
-\<p align="center">   ![MERN]\([https://img.shields.io/badge/Stack-MERN-3B7A57?style=for-the-badge](https://img.shields.io/badge/Stack-MERN-3B7A57?style=for-the-badge))   ![React]\([https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge&logo=react&logoColor=black](https://img.shields.io/badge/Frontend-React-61DAFB?style=for-the-badge\&logo=react\&logoColor=black))   ![Node.js]\([https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white](https://img.shields.io/badge/Backend-Node.js-339933?style=for-the-badge\&logo=nodedotjs\&logoColor=white))   ![MongoDB]\([https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white](https://img.shields.io/badge/Database-MongoDB-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)) \</p>
+<img src="https://img.shields.io/badge/React-Frontend-61DAFB?style=flat-square&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/Node.js-Backend-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/Express.js-API-FFFFFF?style=flat-square&logo=express&logoColor=black" />
+<img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=flat-square&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/Vercel-Frontend%20Hosting-000000?style=flat-square&logo=vercel" />
+<img src="https://img.shields.io/badge/Render-Backend%20Hosting-46E3B7?style=flat-square&logo=render&logoColor=black" />
+
+<br/><br/>
+
+**Built for the next generation of institute management.**
+
+</div>
 
 ---
 
-## 🚀 01. Project Introduction
+## ✦ Project Overview
 
-**NexLearn** is an Institute Management System project built with the MERN stack. Its vision is to provide educational institutes with a centralized digital platform for managing administrative operations, student records, academic activities, and financial workflows.
+**NexLearn** is a MERN-stack **Institute Management System** designed to provide educational institutions with a centralized digital platform.
 
-The project is being developed around separate experiences for Administrators, Teachers, and Students, along with a public-facing institute website.
+The project aims to bring administrative operations, student information, academic activities and financial workflows together into one organized ecosystem.
 
-The current version provides the website, portal login experience, and dashboard interface. Additional institute-management modules are part of the planned development scope.
+The platform is planned around a modern public-facing website and dedicated Admin, Teacher and Student portals.
 
-## ✨ 02. Current Project Highlights
+The current version focuses on the public website, portal login experience and dashboard interface. Additional institute-management modules are part of the planned development roadmap.
 
-The current project focuses on its core interface and portal experience.
+<div align="center">
 
-- Modern public-facing institute website.
-- Dedicated portal login interface.
-- Admin, Teacher, and Student role selection.
-- Role-based navigation and authentication flow.
-- Dashboard interface.
-- Light and Dark theme support.
-- Responsive layouts.
-- Modern UI components and interactive elements.
-- Brevo Email API integration.
+| <div align="center">01</div> | <div align="center">02</div> | <div align="center">03</div> |
+|:---:|:---:|:---:|
+| **Public Website** | **Admin Dashboard** | **Academic Portals** |
+| Institute presence | Centralized control | Student & teacher access |
 
-## 🏛️ 03. Portal Overview
+</div>
 
-| Portal             | Purpose                                                                        |
-| ------------------ | ------------------------------------------------------------------------------ |
-| **Admin Portal**   | Centralized administrative dashboard and future institute-management controls. |
-| **Teacher Portal** | Dedicated dashboard experience for teaching staff.                             |
-| **Student Portal** | Dedicated dashboard experience for students.                                   |
-| **Public Website** | Institute introduction, information, and program presentation.                 |
+## ↗ Live Platform
 
-## 🔐 04. Demo Login Credentials
+| Platform | Deployment |
+|:---|:---|
+| **Live Website** | [nexlearn-demo.vercel.app](https://nexlearn-demo.vercel.app/) |
+| Frontend Application | [Vercel Deployment](https://nexlearn-demo.vercel.app/) |
+| Backend API | [nexlearn-backend-vx37.onrender.com](https://nexlearn-backend-vx37.onrender.com/) |
+| Source Code | [GitHub Repository](https://github.com/vickey-singh/NexLearn) |
 
-Use the following demo accounts to explore the portal login experience.
+---
 
-| Role    | Email               | Password      |
-| ------- | ------------------- | ------------- |
-| Admin   | `admin@gmail.com`   | `Admin2492`   |
-| Student | `student@gmail.com` | `Student2492` |
-| Teacher | `teacher@gmail.com` | `Teacher2492` |
+# ✦ Platform Features
 
-**Demo access note:** These credentials are intended only for temporary demonstration accounts. Do not use real personal or production account credentials here. Anyone who can view this README can see these details. Rotate or disable the demo passwords if they are exposed.
+> **Development Status:** The current version provides the website, portal login and dashboard experience. The management modules below describe the planned product scope and are not represented as fully implemented features.
 
-## 🗺️ 05. Future Feature Scope
+## 01 — Public Website
 
-NexLearn is planned as a broader institute-management platform. The following modules describe its intended functional scope and are not claims of currently completed functionality.
+A modern digital presence for an educational institute.
 
-### A. Student Management System
+- Modern, responsive homepage.
+- Institute information and introduction.
+- About section.
+- Programs and courses presentation.
+- Responsive website layouts.
+- Public-facing institute information.
+- Scope for dynamic content and announcements.
 
-A centralized module for managing student information and academic records.
+## 02 — Administration Dashboard
 
-Planned capabilities:
+A centralized workspace intended to become the main control center for institute operations.
 
-- Student registration and admission management.
-- Student profile and personal information.
-- Admission number and student ID management.
-- Course, batch, and session allocation.
-- Student status management (Active, Inactive, Completed).
-- Student search, filtering, and record management.
+- Admin dashboard interface.
+- Administrative portal experience.
+- Role-based login and navigation.
+- Dashboard overview.
+- Planned student and faculty management.
+- Planned admission management.
+- Planned fee and payment administration.
+- Planned attendance and academic management.
+- Planned reports and analytics.
+- Planned institute settings.
+
+## 03 — Student Management System
+
+A dedicated module planned for managing student information and academic records.
+
+- Student registration and admission records.
+- Student profile management.
+- Personal and academic information.
+- Admission number and student identification.
+- Course and batch allocation.
+- Academic session management.
+- Student status management.
+- Student search and filtering.
 - Student document management.
-- Student profile and academic history.
+- Student academic history.
 
-### B. Fee Management System
+## 04 — Teacher Management & Portal
 
-A structured financial management module for institute fee operations.
+A dedicated teacher-side environment for academic activities.
 
-Planned capabilities:
+- Teacher registration and management.
+- Teacher profiles.
+- Teacher authentication.
+- Dedicated teacher dashboard.
+- Course and batch assignment.
+- Student information access.
+- Teaching schedule management.
+- Examination and marks-related workflows.
+- Student result management.
 
-- Course-wise fee structure.
-- Student-wise fee assignment.
-- Total fee and pending fee tracking.
-- Installment-based payment plans.
-- Installment due-date management.
-- Fee collection and payment records.
-- Fee waiver and concession management.
-- Partial payment support.
-- Paid, Pending, and Overdue fee status.
-- Student-wise fee history.
-- Fee collection reports.
+## 05 — Advanced Fee Management
 
-### C. Payment Management
+A planned fee management system supporting installment-based payments and student-wise financial records.
 
-A dedicated workflow for tracking and managing financial transactions.
+| Capability | Description |
+|:---|:---|
+| Fee Structure | Course-wise fee configuration |
+| Fee Assignment | Student-wise fee allocation |
+| Fee Tracking | Total and pending fee records |
+| Installments | Installment-based payment management |
+| Due Dates | Installment due-date tracking |
+| Fee Adjustment | Installment adjustment functionality |
+| Fee Waiver | Waiver and concession management |
+| Payment Status | Paid, partial and pending |
+| Due Calculation | Remaining balance calculation |
+| Payment History | Student-wise payment records |
+| Receipts | Payment receipt generation |
+| Reporting | Fee-related reports and summaries |
 
-Planned capabilities:
+## 06 — Student Portal
 
-- Payment entry and transaction records.
-- Payment history.
-- Installment payment tracking.
-- Remaining balance calculation.
-- Payment receipt generation.
-- Payment verification.
-- Transaction-wise reporting.
+A dedicated student environment planned to provide access to academic and institute-related information.
 
-### D. Attendance Management
+- Student profile and personal details.
+- Course and batch information.
+- Attendance records.
+- Fee details and payment history.
+- Installment information.
+- Examination results.
+- Academic notifications.
+- Important institute updates.
 
-A digital attendance system for monitoring student attendance.
+## 07 — Attendance Management
 
-Planned capabilities:
+A digital attendance module planned for monitoring student attendance.
 
 - Daily attendance marking.
-- Present, Absent, and Leave status.
+- Present, Absent and Leave status.
 - Batch-wise attendance.
 - Attendance history.
 - Monthly attendance reports.
 - Attendance percentage calculation.
-- Biometric attendance integration.
-- Automated absent notifications.
+- Biometric device integration.
+- Automatic absent marking.
+- Attendance notifications.
 
-### E. Course & Batch Management
+## 08 — Examination & Result Management
 
-Academic organization and course administration.
-
-Planned capabilities:
-
-- Course creation and management.
-- Batch creation and allocation.
-- Session management.
-- Course duration and fee configuration.
-- Teacher assignment.
-- Student-batch mapping.
-
-### F. Teacher Management
-
-A dedicated module for managing teaching staff.
-
-Planned capabilities:
-
-- Teacher registration and profiles.
-- Teacher information management.
-- Course and batch assignment.
-- Teaching schedule management.
-- Teacher-wise student information.
-- Teacher activity overview.
-
-### G. Examination & Result Management
-
-Academic assessment and performance tracking.
-
-Planned capabilities:
+An academic assessment system planned to support examination and student performance workflows.
 
 - Examination scheduling.
-- Subject and marks management.
+- Subject-wise marks management.
 - Marks entry and evaluation.
 - Grade calculation.
 - Result generation.
 - Student performance reports.
 - Academic progress tracking.
+- Examination history.
 
-### H. Reports & Analytics
+## 09 — Reports & Analytics
 
-A centralized reporting system for administrative insights.
-
-Planned capabilities:
+A centralized reporting environment for administrative insights.
 
 - Student statistics.
 - Admission reports.
@@ -177,158 +195,244 @@ Planned capabilities:
 - Attendance reports.
 - Course and batch reports.
 - Financial summaries.
-- Dashboard analytics and visual charts.
+- Examination performance reports.
+- Dashboard charts and analytics.
 
-### I. Communication & Notifications
+## 10 — Automated Communication
 
-A communication layer for institute-related updates.
-
-Planned capabilities:
+A planned communication layer for institutional notifications.
 
 - Email notifications.
+- Admission-related notifications.
 - Fee due reminders.
 - Attendance notifications.
 - Student announcements.
 - Academic updates.
-- Teacher-student communication.
-
-### J. Student & Teacher Portals
-
-Expanded role-specific portal functionality.
-
-**Student Portal:**
-
-- Personal profile.
-- Course and batch information.
-- Attendance records.
-- Fee status and payment history.
-- Examination results.
-- Academic notifications.
-
-**Teacher Portal:**
-
-- Teacher profile.
-- Assigned courses and batches.
-- Student information.
-- Attendance management.
-- Examination and marks entry.
-- Academic notifications.
+- Teacher and student communication.
 
 ---
 
-## 🧰 06. Technology Stack
+# ✦ Future Automation & Scheduled Workflows
 
-| Technology      | Application                   |
-| --------------- | ----------------------------- |
-| MongoDB         | Database                      |
-| Express.js      | Backend framework             |
-| React.js        | Frontend development          |
-| Vite            | Development and build tooling |
-| Node.js         | Server-side runtime           |
-| JavaScript      | Application logic             |
-| CSS3            | Styling and responsive UI     |
-| Brevo Email API | Email integration             |
-| Git & GitHub    | Version control               |
-| Vercel          | Frontend hosting              |
-| Render          | Backend hosting               |
+NexLearn is planned to support automated processing of repetitive institute activities.
 
-## 🔄 07. Application Architecture
+| Workflow | Planned Function |
+|:---|:---|
+| Attendance Finalization | Scheduled attendance processing |
+| Auto Absent Marking | Automatic absent identification |
+| Attendance Email | Absent-student notifications |
+| Fee Reminders | Automated due-fee notifications |
+| Admission Notifications | Admission-related communication |
+| Duplicate Prevention | Avoid repeated notification processing |
+| Scheduled Jobs | Automated background workflows |
 
-NexLearn follows a client-server architecture.
+---
+
+# ✦ Demo Portal Access
+
+The following credentials are provided for demonstration purposes.
+
+| Portal | Email | Password |
+|:---|:---|:---|
+| Admin | `admin@gmaol.com` | `Admin2492` |
+| Student | `student@gmail.com` | `Student2492` |
+| Teacher | `teacher@gmail.com` | `Teacher2492` |
+
+**Demo Access Notice:** These must be disposable demonstration accounts, not real production accounts. Anyone viewing this public repository can see these credentials. Rotate or disable the passwords if exposed.
+
+---
+
+# ✦ Technology & Infrastructure
+
+<div align="center">
+
+### Built with the MERN Stack
+
+</div>
+
+| Layer | Technologies |
+|:---|:---|
+| Frontend | React.js, Vite, JavaScript, HTML5, CSS3 |
+| Backend | Node.js, Express.js |
+| Database | MongoDB |
+| API Communication | REST API |
+| Email Integration | Brevo Email API |
+| Version Control | Git, GitHub |
+| Frontend Hosting | Vercel |
+| Backend Hosting | Render |
+
+---
+
+# ✦ System Architecture
+
+<div align="center">
+
+### NexLearn — Application Architecture
+
+</div>
 
 ```text
-                     NEXLEARN
-                        |
-            +-----------+-----------+
-            |                       |
-       Public Website           Portal Login
-                                    |
-                            Role Authentication
-                                    |
-                  +-----------------+-----------------+
-                  |                 |                 |
-                ADMIN             TEACHER           STUDENT
-                  |                 |                 |
-              Dashboard         Dashboard         Dashboard
-                  |                 |                 |
-                  +-----------------+-----------------+
-                                    |
-                               Backend API
-                                    |
-                             Node.js / Express
-                                    |
-                                 MongoDB
+                  ┌──────────────────────────┐
+                  │        NEXLEARN          │
+                  │   INSTITUTE PLATFORM     │
+                  └────────────┬─────────────┘
+                               │
+              ┌────────────────┴────────────────┐
+              │                                 │
+      ┌───────▼────────┐               ┌────────▼────────┐
+      │ PUBLIC WEBSITE │               │   PORTAL LOGIN  │
+      └────────────────┘               └────────┬────────┘
+                                                │
+                                   ┌────────────┼────────────┐
+                                   │            │            │
+                              ┌────▼───┐   ┌────▼────┐  ┌────▼────┐
+                              │ ADMIN  │   │ TEACHER │  │ STUDENT │
+                              │ PORTAL │   │ PORTAL  │  │ PORTAL  │
+                              └────┬───┘   └────┬────┘  └────┬────┘
+                                   │            │            │
+                                   └────────────┼────────────┘
+                                                │
+                                       ┌────────▼────────┐
+                                       │  REACT + VITE   │
+                                       │    FRONTEND     │
+                                       └────────┬────────┘
+                                                │
+                                             REST API
+                                                │
+                                       ┌────────▼────────┐
+                                       │ NODE.JS +       │
+                                       │ EXPRESS.JS      │
+                                       │ BACKEND         │
+                                       └────────┬────────┘
+                                                │
+                                       ┌────────▼────────┐
+                                       │    MONGODB      │
+                                       │    DATABASE     │
+                                       └─────────────────┘
+
+                EXTERNAL SERVICE INTEGRATIONS
+                ┌────────────────────────────────┐
+                │ Brevo Email API — Email Service│
+                │ Vercel — Frontend Hosting      │
+                │ Render — Backend Hosting       │
+                └────────────────────────────────┘
 ```
 
-The frontend handles the user interface and portal experience, while the backend manages API operations and database communication.
+---
 
-## ⚙️ 08. Local Installation
+# ✦ Deployment Architecture
+
+<div align="center">
+
+| Service | Platform |
+|:---|:---|
+| Frontend | <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" /> |
+| Backend | <img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black" /> |
+| Database | <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" /> |
+| Email | Brevo Email API |
+| Source Code | GitHub |
+
+</div>
+
+---
+
+# ✦ Getting Started
+
+Follow these steps to run the project locally.
 
 ### Prerequisites
 
-- Node.js
-- npm
-- MongoDB or MongoDB Atlas
+- Node.js and npm
+- MongoDB Atlas account or MongoDB instance
 - Git
 
-### Step 1 — Clone Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/vickey-singh/NexLearn.git
+
 cd NexLearn
 ```
 
-### Step 2 — Backend Setup
+### 2. Setup Backend
 
 ```bash
 cd server
+
 npm install
+```
+
+Create a `.env` file inside the `server` directory and configure the environment variables required by the backend.
+
+Start the backend using the script defined in `server/package.json`:
+
+```bash
 npm run dev
 ```
 
-Configure the required backend environment settings before starting the server.
+### 3. Setup Frontend
 
-### Step 3 — Frontend Setup
-
-Open another terminal:
+Open a separate terminal:
 
 ```bash
 cd client
+
 npm install
+
 npm run dev
 ```
 
-Open the local development URL provided by Vite.
-
-## ☁️ 09. Live Deployment
-
-| Component   | Platform | URL                                                             |
-| ----------- | -------- | --------------------------------------------------------------- |
-| Frontend    | Vercel   | [NexLearn Website](https://nexlearn-demo.vercel.app/)           |
-| Backend     | Render   | [Backend Service](https://nexlearn-backend-vx37.onrender.com/)  |
-| Source Code | GitHub   | [NexLearn Repository](https://github.com/vickey-singh/NexLearn) |
-
-## 🎯 10. Project Vision
-
-The long-term vision of NexLearn is to develop a unified institute-management ecosystem where administrative, financial, and academic activities can be managed through a single platform.
-
-The project aims to reduce manual administrative work, improve information organization, and provide a more connected experience for institute administrators, teachers, and students.
-
-## 👨‍💻 11. Developer
-
-**Vickey Singh**
-
-Project: **NexLearn — Institute Management System**
-
-GitHub: [github.com/vickey-singh](https://github.com/vickey-singh)
+Open the local development URL displayed by Vite.
 
 ---
 
-\<p align="center">
-&#x20; \*\*NEXLEARN\*\*
+# ✦ Security & Data Protection
+
+- Keep API keys and database credentials private.
+- Use environment-based configuration.
+- Protect administrative and role-specific functionality.
+- Validate requests on the backend.
+- Never commit real account credentials.
+- Keep private institutional and student information secure.
+
+---
+
+# ✦ About the Developer
+
+<div align="center">
+
+## Vickey Singh
+
+**Full Stack MERN Developer**
+
+Building modern web applications with a focus on functionality, usability and scalable architecture.
+
+<br/>
+
+<a href="https://github.com/vickey-singh">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+<br/><br/>
+
+<a href="https://github.com/vickey-singh">
+  GitHub Profile
+</a>
+
+</div>
+
+---
+
+<div align="center">
+
+### ✦ NEXLEARN
+
+**Smart Institute Management. Simplified.**
 
 *Learn. Grow. Achieve.*
 
-\<sub>Building a smarter digital experience for modern education.\</sub>
+<br/>
 
-\</p>
+<sub>Designed & Developed with the MERN Stack.</sub>
+
+</div>
